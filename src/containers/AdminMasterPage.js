@@ -162,9 +162,7 @@ export default () => {
 							return (
 								<TableRow
 									hover
-									onClick={event => this.handleClick(event, n.id)}
-									onKeyDown={event => this.handleKeyDown(event, n.id)}
-									key={n.id}
+									key={n._id}
 								>
 									<TableCell>{n.title}</TableCell>
 									<TableCell>{n.description}</TableCell>
@@ -260,9 +258,7 @@ export default () => {
 							return (
 								<TableRow
 									hover
-									onClick={event => this.handleClick(event, n.id)}
-									onKeyDown={event => this.handleKeyDown(event, n.id)}
-									key={n.id}
+									key={n._id}
 								>
 									<TableCell>{n.name}</TableCell>
 									<TableCell>{n.email}</TableCell>

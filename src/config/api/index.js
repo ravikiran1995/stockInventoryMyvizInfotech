@@ -5,6 +5,10 @@ console.log(BASE_URL);
 const API = {
   manufacture: `${BASE_URL}/manufacture`,
   suplliers: `${BASE_URL}/suppliers`,
+  stocks:`${BASE_URL}/stocks`,
+  common:`${BASE_URL}/common`,
+  contacts:`${BASE_URL}/contacts`,
+
 };
 
 export { API };

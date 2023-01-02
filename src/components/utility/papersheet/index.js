@@ -55,7 +55,7 @@ export default props => (
     }}
   >
     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-      {props.title ? <Title style={{ flex: 1 }} title={props.title} subtitle={props.subtitle} /> : ""}
+      {props.title ? <Title style={{ flex: 1 }} title={props.title} subtitle={props.subtitle} /> : null}
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end' }}>
         {props.actions ? props.actions : null}
       </div>

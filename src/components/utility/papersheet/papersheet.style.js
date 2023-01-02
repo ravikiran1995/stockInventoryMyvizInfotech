@@ -5,8 +5,8 @@ import Papers from "../../uielements/paper";
 import { PageTitle } from "../paperTitle/paperTitle.style";
 
 const paperContent = styled.div`
-  padding: 40px 30px;
-  margin: 10px;
+  padding: 0px 20px;
+  margin: 10px
   @media only screen and (max-width: 767px) {
     padding: 30px 15px;
   }
