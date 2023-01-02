@@ -16,13 +16,12 @@ const ContentList = props => <ContList>{props.children}</ContList>;
 
 const DemoWrapper = props => (
   <DemoWrappers
-    className={`${props[`data-transparent`] ? "transparent" : ""} ${
-      props[`data-align`] === "left"
-        ? "left"
-        : props[`data-align`] === "right"
-          ? "right"
-          : props[`data-align`] === "center" ? "center" : ""
-    } ${props[`data-direction`] === "column" ? "column" : ""}
+    className={`${props[`data-transparent`] ? "transparent" : ""} ${props[`data-align`] === "left"
+      ? "left"
+      : props[`data-align`] === "right"
+        ? "right"
+        : props[`data-align`] === "center" ? "center" : ""
+      } ${props[`data-direction`] === "column" ? "column" : ""}
 			${props.className}`}
   >
     {props.children}
@@ -31,9 +30,8 @@ const DemoWrapper = props => (
 
 const Content = props => (
   <Contents
-    className={`${props[`no-padding`] ? "nopadding" : ""} ${
-      props.className ? props.className : ""
-    }`}
+    className={`${props[`no-padding`] ? "nopadding" : ""} ${props.className ? props.className : ""
+      }`}
   >
     {props.scroll ? (
       <Scrollbar style={{ overflowY: "hidden" }}>{props.children}</Scrollbar>
@@ -46,9 +44,8 @@ const Content = props => (
 export default props => (
   <Papersheet
     elevation={props.elevation ? props.elevation : 1}
-    className={`${props[`data-noshadow`] ? "noShadow" : ""} ${
-      props.stretched ? "stretched" : ""
-    } ${props.className ? props.className : ""}
+    className={`${props[`data-noshadow`] ? "noShadow" : ""} ${props.stretched ? "stretched" : ""
+      } ${props.className ? props.className : ""}
     `}
     style={props.style}
     onClick={() => {
@@ -57,7 +54,12 @@ export default props => (
       }
     }}
   >
-    {props.title ? <Title title={props.title} subtitle={props.subtitle} /> : ""}
+    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+      {props.title ? <Title style={{ flex: 1 }} title={props.title} subtitle={props.subtitle} /> : ""}
+      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end' }}>
+        {props.actions ? props.actions : null}
+      </div>
+    </div>
     <Content {...props}>{props.children}</Content>
   </Papersheet>
 );
