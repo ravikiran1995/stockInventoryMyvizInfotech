@@ -1,13 +1,37 @@
 import { getDefaultPath } from '../../helpers/urlSync';
 
 const options = [
-  // {
-  //   label: 'sidebar.dashboard',
-  //   key: 'dashboard',
-  // },
   {
-    label: 'sidebar.blankPage',
-    key: 'blank-page',
+    label: 'sidebar.stockManagement',
+    key: 'stock-management',
+  },
+  {
+    label: 'sidebar.stockOutflow',
+    key: 'stock-outflow',
+  },
+  {
+    label: 'sidebar.barcodeinfo',
+    key: 'barcode-info',
+  },
+  {
+    label: 'sidebar.printBarcodes',
+    key: 'barcode-prints',
+  },
+  {
+    label: 'sidebar.reports',
+    key: 'reports',
+  },
+  {
+    label: 'sidebar.sysUsers',
+    key: 'sys-users',
+  },
+  {
+    label: 'sidebar.adminMaster',
+    key: 'admin-master',
+  },
+  {
+    label: 'sidebar.invoice',
+    key: 'invoices',
   },
 ];
 const getBreadcrumbOption = () => {

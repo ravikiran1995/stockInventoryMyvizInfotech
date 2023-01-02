@@ -65,7 +65,7 @@ const LogoElem = ({ onLogo }) => {
   return (
     <Link to="/dashboard" onClick={onLogo}>
       {/* <img src={Logo} alt="Logo" /> */}
-      Mate admin
+      Stock Inventory
     </Link>
   );
 };

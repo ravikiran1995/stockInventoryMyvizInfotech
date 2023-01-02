@@ -8,9 +8,38 @@ const routes = [
     component: lazy(() => import('../Dashboard')),
   },
   {
-    path: 'blank-page',
-    component: lazy(() => import('../BlankPage')),
+    path: 'stock-management',
+    component: lazy(() => import('../StockManagementPage')),
   },
+  {
+    path: 'stock-outflow',
+    component: lazy(() => import('../StockOutflowPage')),
+  },
+  {
+    path: 'barcode-info',
+    component: lazy(() => import('../BarCodeInformationPage')),
+  },
+  {
+    path: 'barcode-prints',
+    component: lazy(() => import('../PrintBarcodesPage')),
+  },
+  {
+    path: 'reports',
+    component: lazy(() => import('../ReportsPage')),
+  },
+  {
+    path: 'sys-users',
+    component: lazy(() => import('../SystemUsersPage')),
+  },
+  {
+    path: 'admin-master',
+    component: lazy(() => import('../AdminMasterPage')),
+  },
+  {
+    path: 'invoices',
+    component: lazy(() => import('../InvoicesBuilderPage')),
+  },
+  
 ];
 
 class AppRouter extends Component {
