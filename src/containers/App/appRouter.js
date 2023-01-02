@@ -39,6 +39,10 @@ const routes = [
     path: 'invoices',
     component: lazy(() => import('../InvoicesBuilderPage')),
   },
+  {
+    path: 'contacts',
+    component: lazy(() => import('../ContactsPage')),
+  },
   
 ];
 

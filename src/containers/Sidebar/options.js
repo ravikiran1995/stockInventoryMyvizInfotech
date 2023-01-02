@@ -33,6 +33,11 @@ const options = [
     label: 'sidebar.invoice',
     key: 'invoices',
   },
+  {
+    label: 'sidebar.contacts',
+    key: 'contacts',
+  },
+
 ];
 const getBreadcrumbOption = () => {
   const preKeys = getDefaultPath();
