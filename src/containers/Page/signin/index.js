@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import signinImg from '../../../images/signup.svg';
-import fbBtnSvg from '../../../images/facebook-app-symbol.svg';
-import gpBtnSvg from '../../../images/google-plus.svg';
-import authBtnSvg from '../../../images/auth0.svg';
+import signinImg from '../../../images/signin.svg';
 import Button from '../../../components/uielements/button';
 import authAction from '../../../redux/auth/actions';
 import TextField from '../../../components/uielements/textfield';
@@ -19,8 +16,8 @@ const { login } = authAction;
 class SignIn extends Component {
   state = {
     redirectToReferrer: false,
-    username: 'demo@gmail.com',
-    password: 'demodemo',
+    username: 'admindemo@stockinventory.com',
+    password: 'admindemo',
   };
   componentWillReceiveProps(nextProps) {
     if (
@@ -55,11 +52,6 @@ class SignIn extends Component {
 
         <div className="mateSignInPageContent">
           <div className="mateSignInPageLink">
-            <Link to="/signup">
-              <button className="mateSignInPageLinkBtn" type="button">
-                Register
-              </button>
-            </Link>
             <Link to="#">
               <button className="mateSignInPageLinkBtn active" type="button">
                 Login
@@ -68,9 +60,9 @@ class SignIn extends Component {
           </div>
           <Scrollbars style={{ height: '100%' }}>
             <div className="mateSignInPageGreet">
-              <h1>Hello User,</h1>
+              <h1>Hello Admin,</h1>
               <p>
-                Welcome to Mate Admin, Please Login with your personal account
+                Welcome to Stock Inventory, Please Login with your account
                 information.
               </p>
             </div>
@@ -102,67 +94,10 @@ class SignIn extends Component {
             </div>
             <div className="mateLoginSubmitText">
               <span>
-                * Username: demo@gmail.com , Password: demodemo or click on any
-                button.
+                * Username: admindemo@stockinventory.com , Password: admindemo
               </span>
             </div>
-            <div className="mateLoginOtherBtn">
-              <div className="mateLoginOtherBtnWrap">
-                <Button
-                  onClick={this.handleLogin}
-                  type="button"
-                  variant="contained"
-                  className="btnFacebook"
-                >
-                  <div className="mateLoginOtherIcon">
-                    <img src={fbBtnSvg} alt="facebook Btn" />
-                  </div>
-                  <IntlMessages id="page.signInFacebook" />
-                </Button>
-              </div>
-              <div className="mateLoginOtherBtnWrap">
-                <Button
-                  onClick={this.handleLogin}
-                  type="button"
-                  className="btnGooglePlus"
-                >
-                  <div className="mateLoginOtherIcon">
-                    <img src={gpBtnSvg} alt="Google Plus Btn" />
-                  </div>
-                  <IntlMessages id="page.signInGooglePlus" />
-                </Button>
-              </div>
-              <div className="mateLoginOtherBtnWrap">
-                {Auth0.isValid ? (
-                  <Button
-                    type="button"
-                    className="btnAuthZero"
-                    onClick={() => {
-                      Auth0.login(this.handleLogin);
-                    }}
-                  >
-                    <div className="mateLoginOtherIcon">
-                      <img src={authBtnSvg} alt="Authentication Btn" />
-                    </div>
-                    <IntlMessages id="page.signInAuth0" />
-                  </Button>
-                ) : (
-                  <Button
-                    type="button"
-                    className="primary btnAuthZero"
-                    onClick={this.handleLogin}
-                  >
-                    <div className="mateLoginOtherIcon">
-                      <img src={authBtnSvg} alt="Authentication Btn" />
-                    </div>
-                    <IntlMessages id="page.signInAuth0" />
-                  </Button>
-                )}
-              </div>
-              <div className="mateLoginOtherBtnWrap">
-                {Firebase.isValid && <FirebaseLogin login={this.handleLogin} />}
-              </div>
-            </div>
+            
           </Scrollbars>
         </div>
       </SignInStyleWrapper>
