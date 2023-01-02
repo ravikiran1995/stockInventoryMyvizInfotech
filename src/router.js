@@ -36,12 +36,6 @@ const PublicRoutes = ({ history, isLoggedIn }) => (
         path="/signin"
         component={lazy(() => import('./containers/Page/signin'))}
       />
-      <Route
-        path="/auth0loginCallback"
-        render={props => {
-          Auth0.handleAuthentication(props);
-        }}
-      />
       <RestrictedRoute
         path="/dashboard"
         component={App}
@@ -56,11 +50,6 @@ const PublicRoutes = ({ history, isLoggedIn }) => (
         exact
         path="/505"
         component={lazy(() => import('./containers/Page/505'))}
-      />
-      <Route
-        exact
-        path="/signup"
-        component={lazy(() => import('./containers/Page/signup'))}
       />
       <Route
         exact

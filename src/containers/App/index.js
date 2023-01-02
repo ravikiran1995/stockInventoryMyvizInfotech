@@ -74,7 +74,6 @@ class App extends Component {
                   url={url}
                 />
               </MUIPProvider>
-              <ThemeSwitcherButton />
               {/* <SecondarySidebar
                 InnerComponent={ThemeSwitcher}
                 currentActiveKey="themeSwitcher"

@@ -8,7 +8,7 @@ export default () => (
 	<LayoutWrapper>
 		<FullColumn>
 			<Papersheet title={<IntlMessages id="sidebar.dashboard" />}>
-				Mate Dashboard
+				Stock Inventory Dashboard for Overview
 			</Papersheet>
 		</FullColumn>
 	</LayoutWrapper>

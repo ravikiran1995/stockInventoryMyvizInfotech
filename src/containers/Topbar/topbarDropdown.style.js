@@ -49,7 +49,7 @@ const TopbarDropdown = styled.div`
   background-color: #ffffff;
   margin: 0;
   width: 290px;
-  height: 260px;
+  height: 170px;
   min-width: 160px;
   flex-shrink: 0;
   ${borderRadius('2px')};

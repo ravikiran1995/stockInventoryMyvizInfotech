@@ -50,22 +50,6 @@ class Topbar extends Component {
                 <TopbarNotification {...propsTopbar} />
               </li> */}
 
-              <li className="topbarNotification">
-                <div>
-                  <Icon
-                    onClick={() => switchActivation('notification')}
-                    style={{ matginTop: 5 }}
-                  >
-                    widgets
-                  </Icon>
-                  {/* <SecondarySidebar
-                    InnerComponent={TopbarNotification}
-                    currentActiveKey="notification"
-                    {...propsTopbar}
-                  /> */}
-                </div>
-              </li>
-
               <li className="topbarUser">
                 <TopbarUser {...propsTopbar} />
               </li>
