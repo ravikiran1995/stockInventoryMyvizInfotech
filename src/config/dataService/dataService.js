@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_ENDPOINT = "http://127.0.0.1:8081";
+export const API_ENDPOINT = "http://13.231.109.119:8081";
 
 const authHeader = () => ({
   Authorization: `Bearer ${window.localStorage.getItem("access_token")}`,
